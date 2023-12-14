@@ -294,7 +294,6 @@ GameObject:
   - component: {fileID: 1066310239}
   - component: {fileID: 1066310241}
   - component: {fileID: 1066310240}
-  - component: {fileID: 1066310242}
   m_Layer: 5
   m_Name: paddle
   m_TagString: Untagged
@@ -359,19 +358,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1066310238}
   m_CullTransparentMesh: 1
---- !u!114 &1066310242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1066310238}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de52bba836fa10c4e9ee703bc9af9c73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_moveSpeed: 400
 --- !u!1 &1395385513
 GameObject:
   m_ObjectHideFlags: 0
@@ -714,7 +700,6 @@ GameObject:
   - component: {fileID: 2115668264}
   - component: {fileID: 2115668266}
   - component: {fileID: 2115668265}
-  - component: {fileID: 2115668267}
   m_Layer: 5
   m_Name: ball
   m_TagString: Untagged
@@ -779,19 +764,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2115668263}
   m_CullTransparentMesh: 1
---- !u!114 &2115668267
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2115668263}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 597cbae690e496345ab4eddd733ef074, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_initialVelocity: {x: 300, y: 480, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
