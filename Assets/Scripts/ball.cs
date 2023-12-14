@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ball : MonoBehaviour
+public class Ball : MonoBehaviour
 {
     public Vector3 m_initialVelocity = new Vector3(300.0f, 480.0f, 0.0f);
     Vector3 m_velocity;
-    const float m_radius = 10.0f;
-    const float m_wallWidth = 20.0f;
+    const float RADIUS = 10.0f;
+    public const float WALL_WIDTH = 20.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -24,27 +24,27 @@ public class ball : MonoBehaviour
         // check for bouncing off the top
         if (m_velocity.y > 0.0f)
         {
-            if (pos.y + m_radius >= Screen.height - m_wallWidth)
+            if (pos.y + RADIUS >= Screen.height - WALL_WIDTH)
             {
-                pos.y = Screen.height - m_wallWidth - m_radius;
+                pos.y = Screen.height - WALL_WIDTH - RADIUS;
                 m_velocity.y = -m_velocity.y;
             }
         }
         // check for bouncing off right wall
         if (m_velocity.x > 0.0f)
         {
-            if (pos.x + m_radius >= Screen.width - m_wallWidth)
+            if (pos.x + RADIUS >= Screen.width - WALL_WIDTH)
             {
-                pos.x = Screen.width - m_wallWidth - m_radius;
+                pos.x = Screen.width - WALL_WIDTH - RADIUS;
                 m_velocity.x = -m_velocity.x;
             }
         }
         // check for bouncing off left wall
         if (m_velocity.x < 0.0f)
         {
-            if (pos.x - m_radius < m_wallWidth)
+            if (pos.x - RADIUS < WALL_WIDTH)
             {
-                pos.x = m_wallWidth + m_radius;
+                pos.x = WALL_WIDTH + RADIUS;
                 m_velocity.x = -m_velocity.x;
             }
         }

@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class paddle : MonoBehaviour
+public class Paddle : MonoBehaviour
 {
     public float m_moveSpeed = 400.0f;
+    const float PADDLE_HALF_WIDTH = 75.0f;
+    public const float PADDLE_HALF_HEIGHT = 10.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +30,17 @@ public class paddle : MonoBehaviour
 
         Vector3 pos = transform.position;
         pos += move * m_moveSpeed * Time.deltaTime;
+
+        // bound the paddle to stay on screen
+        if (pos.x > Screen.width - PADDLE_HALF_WIDTH - Ball.WALL_WIDTH)
+        {
+            pos.x = Screen.width - PADDLE_HALF_WIDTH - Ball.WALL_WIDTH;
+        }
+        if (pos.x < PADDLE_HALF_WIDTH + Ball.WALL_WIDTH)
+        {
+            pos.x = PADDLE_HALF_WIDTH + Ball.WALL_WIDTH;
+        }    
+
         transform.position = pos;
     }
 }
